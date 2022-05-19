@@ -1,0 +1,24 @@
+@use '../abstracts' as *;
+
+body {
+    font-size: $body2;
+    font-family: $primary-f-family;
+    color: map-get($colors, 'gray', '100');
+    letter-spacing: -.5px;
+}
+
+h1, 
+h2,
+h3 {
+    // font-size: 
+    // font-family:
+    // color: 
+    font-weight: 900;
+    line-height: 1;
+}
+
+h2,
+h3,
+p {
+    margin-bottom: 1em;
+}

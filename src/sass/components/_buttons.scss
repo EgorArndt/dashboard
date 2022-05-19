@@ -1,0 +1,31 @@
+@use '../abstracts' as *;
+
+.btn {
+    &-core {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        min-width: 1.5rem;
+        box-sizing: border-box;
+        outline: transparent solid 2px;
+        outline-offset: 2px;
+        user-select: none;
+        appearance: none;
+        text-decoration: none;
+        color: inherit;
+        cursor: pointer;
+        border-radius: 4px;
+        font-size: inherit;
+        transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, padding 250ms ease;
+    }
+    &-s {
+        padding: map-get($sizes, 's');
+    }
+    &-m {
+        padding: map-get($sizes, 'm');
+    }
+    &-l {
+        padding: map-get($sizes, 'l');
+    }
+}

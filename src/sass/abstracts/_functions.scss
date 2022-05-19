@@ -1,0 +1,15 @@
+@function set-contrast-text($bg) {
+    @if lightness($bg) > 80 {
+      @return #000;
+    } @else {
+      @return #fff;
+    }
+}
+
+@function set-bg-on-hover($bg) {
+  @if lightness($bg) > 80 {
+    @return darken($bg, 5%);
+  } @else {
+    @return lighten($bg, 10%);
+  }
+}

@@ -1,0 +1,21 @@
+@use '../abstracts' as *;
+
+.nav {
+    width: 15em;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        // justify-content: center;
+        // align-items: center;
+
+        li {
+            color: map-deep-get($colors, "gray", "400"); 
+        }
+    }
+}

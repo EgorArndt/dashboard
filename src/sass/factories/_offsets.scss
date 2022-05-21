@@ -1,0 +1,35 @@
+@use '../abstracts' as *;
+
+$offsetShortcuts: (
+    "mt": "margin-top",
+    "mr": "margin-right",
+    "mb": "margin-bottom",
+    "ml": "margin-left",
+    "mx": "margin-inline",
+    "my": "margin-block",
+    "m": "margin",
+    "pt": "padding-top",
+    "pr": "padding-right",
+    "pb": "padding-bottom",
+    "pl": "padding-left",
+    "px": "padding-inline",
+    "py": "padding-block",
+    "p": "padding",
+);
+
+@mixin offsetFactory ($prop, $cn) {
+    @for $i from 0 through 10 {
+        .#{$cn}-#{$i} {
+            #{$prop}: #{$i}rem;
+        }
+    }
+}
+
+.p-05 {
+    padding: 0.5rem;
+}
+
+@include offsetFactory(gap, gap);
+@each $shortcut, $fullname in $offsetShortcuts {
+    @include offsetFactory($fullname, $shortcut)
+}

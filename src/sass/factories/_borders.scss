@@ -1,0 +1,15 @@
+@use '../abstracts' as *;
+
+$borderShortcuts: (
+    "bt": "border-top",
+    "br": "border-right",
+    "bb": "border-bottom",
+    "bl": "border-left",
+    "b": "border"
+);
+
+@each $shortcut, $fullname in $borderShortcuts {
+    .#{$shortcut} {
+        #{$fullname}: 1px solid map-deep-get($colors, "gray", "200");
+    }
+}

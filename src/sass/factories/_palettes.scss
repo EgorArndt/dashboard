@@ -1,0 +1,39 @@
+@use '../abstracts' as *;
+
+.inherits-palette {
+    background-color: inherit;
+    color: inherit;
+}
+
+@each $palette, $clr in $colors {
+    @each $darkness, $value in $clr {
+        .palette-#{$palette}-#{$darkness} {
+            background-color: $value;
+            color: set-contrast-text($value);
+
+            &.dark-h:hover {
+                background-color: darken($value, 6%);
+                color: set-contrast-text($value);
+            }
+            &.light-h:hover {
+                background-color: lighten($value, 6.5%);
+                color: set-contrast-text($value);
+            }
+        }
+    }
+}
+
+@each $palette, $clr in $colors {
+    @each $darkness, $value in $clr {
+        .color-#{$palette}-#{$darkness} {
+            color: $value;
+
+            &.dark-h:hover {
+                color: darken($value, 27%);
+            }
+            &.light-h:hover {
+                color: lighten($value, 27.5%);
+            }
+        }
+    }
+}

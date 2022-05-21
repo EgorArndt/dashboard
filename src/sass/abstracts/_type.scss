@@ -1,11 +1,13 @@
-$h1: '2rem, 5vw, 4rem';
-$h2: '1.7rem, 4vw, 4rem';
-$title: '1.2rem, 3.7vw, 1.5rem';
-$header: '3rem, 4vw, 3.75rem';
-$body1: '0.825rem, 1.5vw, 0.925rem';
-$body2: '0.925rem, 1.8vw, 1.05rem';
-$caption: '12px, 12px, 12px';
-
+$f-sizes: (
+    h1: clamp(2rem, 5vw, 4rem),
+    h2: clamp(1.7rem, 4vw, 4rem),
+    title: clamp(1.2rem, 3.7vw, 1.5rem),
+    header: clamp(3rem, 4vw, 3.75rem),
+    body1: clamp(0.825rem, 1.5vw, 0.925rem),
+    body2: clamp(0.925rem, 1.8vw, 1.05rem),
+    caption: 12px
+);
+    
 $fallbackFonts: '-apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue",sans-serif';
 
 $primary-f-family: 'Inter', $fallbackFonts;

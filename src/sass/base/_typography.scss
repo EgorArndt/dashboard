@@ -1,18 +1,14 @@
 @use '../abstracts' as *;
 
 body {
-    font-size: $body2;
+    font-size: map-get($f-sizes, body2);
     font-family: $primary-f-family;
-    color: map-get($colors, 'gray', '100');
-    letter-spacing: -.5px;
+    color: map-deep-get($colors, "gray", "300");
 }
 
 h1, 
 h2,
 h3 {
-    // font-size: 
-    // font-family:
-    // color: 
     font-weight: 900;
     line-height: 1;
 }

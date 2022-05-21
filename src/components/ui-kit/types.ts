@@ -2,7 +2,7 @@ import React from 'react'
 
 export type DefaultProps = {
     as?: keyof React.ReactHTML
-    children?: Children<any> 
+    children?: Children<React.ReactNode> 
     className?: string
     style?: React.CSSProperties
     ref?: React.RefObject<HTMLElement>

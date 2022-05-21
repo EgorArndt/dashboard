@@ -1,0 +1,13 @@
+.accordion {
+    max-height: 0;
+    width: 100%;
+    overflow: hidden;
+    background: transparent;
+    position: relative;
+    transition: max-height 0.5s cubic-bezier(0, 1, 0, 1);
+    z-index: 2;
+
+    &.visible {
+        max-height: 1200px;
+    }
+}

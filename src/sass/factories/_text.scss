@@ -1,0 +1,13 @@
+@use '../abstracts' as *;
+
+@each $type, $value in $f-sizes {
+    .#{$type} {
+        font-size: $value;
+    }
+}
+
+@for $i from 1 through 8 {
+    .weight-#{$i}00 {
+        font-weight: #{$i}00;
+    }
+}
